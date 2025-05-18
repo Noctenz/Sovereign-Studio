@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Sovereign Studio</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    
-    <!-- Fonts -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -28,14 +21,12 @@
     <!-- Navigation -->
     <nav>
         <div class="logo">
-            <img src="images/logo.png" alt="Sovereign Studio Logo">
-            <span>Sovereign Studio</span>
+            <img src="images/logo.png" alt="Sovereign Studios">
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
             <a href="#team">Teams</a>
             <a href="#contact">Contact</a>
         </div>
@@ -44,14 +35,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- BG Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Sovereign Studio</h1>
-            <p>Creating Exceptional Minecraft Experiences</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="primary-btn">Get Started</a>
-                <a href="#portfolio" class="secondary-btn">View Our Work</a>
+            <div class="hero-content">
+                <h1 class="hero-header">
+                    <img src="images/header.png" class="hero-img">
+                </h1>
+                <p>
+                Sovereign Studio is a provider of high quality Minecraft resources
+                </p>
+                <a href="#about" class="hero-button">Scroll Down</a>
+              </div>
             </div>
         </div>
     </section>
@@ -77,36 +72,35 @@
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Explore what we can create for you</p>
+        <div class="service-container">
+            <h2 class="service-title">Our Services</h2>
+            <div class="title-underline"></div>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="assets/services/models.jpg" alt="3D Models">
+                <img src="images/hero-bg.png" alt="3D Models">
                 <h3>Custom Models</h3>
                 <p>Professional Minecraft models crafted to your specifications</p>
                 <a href="#contact" class="service-btn">Learn More</a>
             </div>
-            <!-- Add more service cards -->
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="section-header">
-            <h2>Our Portfolio</h2>
-            <p>Check out our latest works</p>
-        </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="assets/portfolio/work1.jpg" alt="Fantasy Castle">
-                <div class="portfolio-overlay">
-                    <h3>Fantasy Castle</h3>
-                    <p>Custom Build</p>
-                </div>
+            <div class="service-card">
+                <img src="images/hero-bg.png" alt="3D Models">
+                <h3>Custom Models</h3>
+                <p>Professional Minecraft models crafted to your specifications</p>
+                <a href="#contact" class="service-btn">Learn More</a>
             </div>
-            <!-- Add more portfolio items -->
+            <div class="service-card">
+                <img src="images/hero-bg.png" alt="3D Models">
+                <h3>Custom Models</h3>
+                <p>Professional Minecraft models crafted to your specifications</p>
+                <a href="#contact" class="service-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="images/hero-bg.png" alt="3D Models">
+                <h3>Custom Models</h3>
+                <p>Professional Minecraft models crafted to your specifications</p>
+                <a href="#contact" class="service-btn">Learn More</a>
+            </div>
         </div>
     </section>
 
@@ -127,48 +121,82 @@
                         <h3>Noctenz</h3>
                         <p class="role">Founder & Lead Designer</p>
                         <div class="member-contact">
-                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
+                            <a href="https://discord.com/users/745500139736531006" class="contact-icon"><i class="fab fa-discord"></i></a>
                             <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Add more team cards -->
+                <div class="team-card">
+                    <div class="member-avatar-container">
+                        <div class="member-avatar">
+                            <img src="images/team/member1.png" alt="Noctenz">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Noctenz</h3>
+                        <p class="role">Founder & Lead Designer</p>
+                        <div class="member-contact">
+                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="member-avatar-container">
+                        <div class="member-avatar">
+                            <img src="images/team/member1.png" alt="Noctenz">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Noctenz</h3>
+                        <p class="role">Founder & Lead Designer</p>
+                        <div class="member-contact">
+                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <div class="contact-left">
-                <div class="brand">
-                    <img src="assets/logo.png" alt="Sovereign Studio Logo" class="brand-logo">
-                    <div class="brand-text">
-                        <h2>Sovereign Studio</h2>
-                        <span>Minecraft</span>
-                    </div>
-                </div>
-                <p class="brand-description">
-                    Bersama kami, wujudkan karakter minecraft impianmu! Temukan berbagai macam skin menarik 
-                    dari kreator berbakat kami. Bergabunglah dengan komunitas kreatif kami.
-                </p>
-                <a href="#" class="cta-button">Mulai Sekarang →</a>
-            </div>
-            <div class="contact-right">
-                <h3>Ayo bergabung!</h3>
-                <p>Ingin mencari skin keren? Mau diskusi dengan kreator? 
-                   Atau punya pertanyaan? Semua bisa di Discord kami!</p>
-                <a href="#" class="discord-button">
-                    <i class="fab fa-discord"></i>
-                    Join Discord
-                </a>
-            </div>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Kolom 1 -->
+      <div class="footer-col">
+        <div class="brand">
+          <img src="images/logo.png" alt="Sovereign Studio Logo" class="brand-logo" />
+          <div>
+            <strong>Chroma</strong> Minecraft
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
-        </div>
-    </section>
+        <p class="footer-desc">
+          Berbeda perangkat dengan temanmu, bukan masalah! Temukan banyak keseruan dengan plugin original kami, serta event-event menarik untukmu dan temanmu. Bersama misteri, harta karun, dan creeper tentunya.
+        </p>
+        <a href="#" class="cta-link">Mainkan Sekarang →</a>
+      </div>
+  
+      <!-- Kolom 3 -->
+      <div class="footer-col">
+        <h4>Skuy lah mabar!</h4>
+        <p class="footer-desc">
+          Nyari temen main, mau tanya–tanya admin, jual barang-barang hasil mining, semuanya bisa. Skuy gasken join discord kita aja
+        </p>
+        <a href="#" class="discord-button">
+          <i class="fab fa-discord"></i> Join Discord
+        </a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
+    </div>
+  </footer>  
 
     <!-- Scripts -->
     <script src="script.js"></script>
