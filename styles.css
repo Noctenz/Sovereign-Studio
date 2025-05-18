@@ -775,13 +775,7 @@ section {
     section {
         padding: 40px 15px;
     }
-
-    /* Meta viewport tag in HTML */
-    /* Add this in your HTML head if not present */
-    /* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
 }
-
-/* Additional fixes for extra small devices */
 @media screen and (max-width: 480px) {
     .team-card {
         max-width: 240px;
