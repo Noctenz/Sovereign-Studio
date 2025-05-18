@@ -10,9 +10,10 @@
     --primary-color: #d42c34;
     --secondary-color: #1c1c1c;
     --text-color: #ffffff;
-    --text-secondary: #8892b0;
+    --text-secondary: #ffffff;
     --background: #1c1c1c;
     --card-background: #222222;
+}
 
 html {
     scroll-behavior: smooth;
@@ -203,7 +204,7 @@ section {
 /* Portfolio Section */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auFto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -238,7 +239,7 @@ section {
     transform: scale(1.1);
 }
 
-/* Team Section Styles */
+/* Team Section */
 .team {
     padding: 80px 20px;
     background-color: #1a1a1a;
@@ -276,13 +277,21 @@ section {
     border-radius: 15px;
     padding: 30px;
     transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.team-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.team-card:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
 .team-card:hover {
     transform: translateY(-10px);
 }
 
-/* Updated Avatar Styles */
 .member-avatar-container {
     width: 150px;
     height: 150px;
@@ -299,9 +308,23 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for image zoom */
 .team-card:hover .member-avatar img {
     transform: scale(1.2);
+}
+
+.member-avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .member-avatar::after {
+    opacity: 1;
 }
 
 .member-info h3 {
@@ -333,163 +356,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.team-card {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-.team-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.team-card:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-/* Hover Effects */
-.member-avatar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.team-card:hover .member-avatar::after {
-    opacity: 1;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .team {
-        padding: 60px 15px;
-    }
-
-    .team-title {
-        font-size: 2rem;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .member-avatar-container {
-        width: 120px;
-        height: 120px;
-    }
-
-    .member-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .role {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-title {
-        font-size: 1.75rem;
-    }
-
-    .team-card {
-        padding: 20px;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.team-card {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-.team-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.team-card:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .team {
-        padding: 60px 15px;
-    }
-
-    .team-title {
-        font-size: 2rem;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .member-avatar {
-        width: 120px;
-        height: 120px;
-    }
-
-    .member-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .role {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-title {
-        font-size: 1.75rem;
-    }
-
-    .team-card {
-        padding: 20px;
-    }
-}
-
-/* About Section Styles */
+/* About Section */
 .about {
     padding: 80px 20px;
     background-color: #1a1a1a;
@@ -506,13 +373,6 @@ section {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 15px;
-}
-
-.title-underline {
-    width: 60px;
-    height: 3px;
-    background-color: #3b3b3b;
-    margin: 0 auto 40px;
 }
 
 .about-description {
@@ -535,36 +395,7 @@ section {
     color: #a0a0a0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about {
-        padding: 60px 15px;
-    }
-
-    .about-title {
-        font-size: 2rem;
-    }
-
-    .about-description {
-        font-size: 1rem;
-    }
-
-    .title-underline {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-title {
-        font-size: 1.75rem;
-    }
-
-    .about-description {
-        font-size: 0.95rem;
-    }
-}
-
-/* Back to Top Button Styles */
+/* Back to Top */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -595,20 +426,18 @@ section {
     font-size: 1.2rem;
 }
 
-/* Hover Effect */
 .back-to-top:hover {
     background-color: #ff4444;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(255, 51, 51, 0.3);
 }
 
-/* Active State */
 .back-to-top:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 10px rgba(255, 51, 51, 0.2);
 }
 
-/* Contact Section Styles */
+/* Contact Section */
 .contact {
     background-color: #080808b3;
     padding: 60px 0 20px;
@@ -624,7 +453,6 @@ section {
     gap: 40px;
 }
 
-/* Brand Styles */
 .brand {
     display: flex;
     align-items: center;
@@ -640,12 +468,6 @@ section {
 
 .brand-text h2 {
     font-size: 1.5rem;
-    margin: 0;
-}
-
-.brand-text span {
-    font-size: 1rem;
-    opacity: 0.9;
 }
 
 .brand-description {
@@ -655,15 +477,13 @@ section {
     opacity: 0.9;
 }
 
-/* CTA Buttons */
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
-    background: transparent;
     border: 2px solid #d42c34;
     color: #d42c34;
-    text-decoration: none;
     border-radius: 6px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -679,8 +499,8 @@ section {
     padding: 12px 24px;
     background-color: #5865F2;
     color: #ffffff;
-    text-decoration: none;
     border-radius: 6px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -712,72 +532,157 @@ section {
     100% { transform: scale(1); }
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .contact-container {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .contact-left {
         grid-column: 1 / -1;
     }
 }
 
-@media (max-width: 576px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-/* Mobile Responsive Fixes */
-@media screen and (max-width: 768px) {
-    /* Fix for overall container */
-    .container {
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
         width: 100%;
-        padding: 0 15px;
-        overflow-x: hidden;
+        background: rgba(8, 8, 8, 0.95);
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    /* Fix for text content */
-    p, h1, h2, h3, h4, h5, h6 {
-        width: 100%;
-        max-width: 100%;
-        word-wrap: break-word;
+    .nav-links.active {
+        display: flex;
     }
 
-    /* Fix for team section */
+    .menu-btn {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+
     .team-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 15px;
-    }
-
-    .team-card {
-        width: 100%;
-        max-width: 280px;
+        max-width: 400px;
         margin: 0 auto;
     }
 
-    /* Fix for images */
-    img {
-        max-width: 100%;
-        height: auto;
+    .member-avatar-container {
+        width: 120px;
+        height: 120px;
     }
 
-    /* Fix for navigation */
-    .nav-links {
-        width: 100%;
-        padding: 10px;
+    .member-info h3 {
+        font-size: 1.3rem;
     }
 
-    /* Add proper spacing */
-    section {
-        padding: 40px 15px;
+    .role {
+        font-size: 1rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .brand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand-text {
+        text-align: center;
+    }
+
+    .contact-right {
+        text-align: center;
     }
 }
-@media screen and (max-width: 480px) {
-    .team-card {
-        max-width: 240px;
+
+@media (max-width: 480px) {
+    .team-title, .about-title {
+        font-size: 1.75rem;
+    }
+
+    .team-card, .about-description {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) translateZ(0);
+        -webkit-transform: translateY(20px) translateZ(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateZ(0);
+        -webkit-transform: translateY(0) translateZ(0);
+    }
+}
+
+/* Hardware acceleration for animations */
+.team-card, .service-card, .portfolio-item {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Android WebView scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Fix for Android keyboard issues */
+input, textarea {
+    font-size: 16px !important; /* Prevent zoom on focus */
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* Smooth scrolling fix for Android */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }

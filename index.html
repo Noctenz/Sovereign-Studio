@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Sovereign Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,29 +25,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        // Back to Top Button Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTopButton = document.getElementById('backToTop');
-            
-            // Show/hide button based on scroll position
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
-            
-            // Smooth scroll to top when clicked
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
     <!-- Navigation -->
     <nav>
         <div class="logo">
@@ -47,7 +36,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#teams">Teams</a>
+            <a href="#team">Teams</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="menu-btn">
@@ -67,24 +56,24 @@
         </div>
     </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="about-container">
-        <h2 class="about-title">What is Sovereign Studio?</h2>
-        <div class="title-underline"></div>
-        
-        <div class="about-description">
-            <p class="main-text">
-                <span class="highlight">Sovereign Studio is a passionate creative team dedicated to pushing the boundaries of</span> 
-                Minecraft design and modeling. We specialize in creating stunning visual experiences through detailed models, pixel art, player skins, thumbnails, and render art.
-            </p>
-            
-            <p class="mission-text">
-                Our mission is to transform imaginative concepts into breathtaking Minecraft realities. With years of combined experience, our talented team delivers exceptional quality work that captivates and inspires. Whether you're looking for intricate models, eye-catching thumbnails, or unique player skins, Sovereign Studio brings creativity and technical excellence to every project.
-            </p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2 class="about-title">What is Sovereign Studio?</h2>
+            <div class="title-underline"></div>
+            <div class="about-description">
+                <p class="main-text">
+                    <span class="highlight">Sovereign Studio is a passionate creative team dedicated to pushing the boundaries of</span> 
+                    Minecraft design and modeling. We specialize in creating stunning visual experiences through detailed models, 
+                    pixel art, player skins, thumbnails, and render art.
+                </p>
+                <p class="mission-text">
+                    Our mission is to transform imaginative concepts into breathtaking Minecraft realities. With years of combined 
+                    experience, our talented team delivers exceptional quality work that captivates and inspires.
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -94,29 +83,12 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="images/services/models.jpg" alt="3D Models">
+                <img src="assets/services/models.jpg" alt="3D Models">
                 <h3>Custom Models</h3>
                 <p>Professional Minecraft models crafted to your specifications</p>
                 <a href="#contact" class="service-btn">Learn More</a>
             </div>
-            <div class="service-card">
-                <img src="images/services/builds.jpg" alt="Custom Builds">
-                <h3>Custom Builds</h3>
-                <p>Exceptional Minecraft builds and architecture</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
-            <div class="service-card">
-                <img src="images/services/textures.jpg" alt="Texture Packs">
-                <h3>Texture Packs</h3>
-                <p>Unique texture packs and resource packs</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
-            <div class="service-card">
-                <img src="images/services/plugins.jpg" alt="Custom Plugins">
-                <h3>Custom Plugins</h3>
-                <p>Specialized plugins for your server</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
+            <!-- Add more service cards -->
         </div>
     </section>
 
@@ -128,108 +100,77 @@
         </div>
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="images/portfolio/work1.jpg" alt="Project 1">
+                <img src="assets/portfolio/work1.jpg" alt="Fantasy Castle">
                 <div class="portfolio-overlay">
                     <h3>Fantasy Castle</h3>
                     <p>Custom Build</p>
                 </div>
             </div>
-            <!-- Add more portfolio items as needed -->
+            <!-- Add more portfolio items -->
         </div>
     </section>
 
-<!-- Team Section -->
-<section id="team" class="team">
-    <div class="team-container">
-        <h2 class="team-title">Our Teams</h2>
-        <div class="title-underline"></div>
-        
-        <div class="team-grid">
-            <!-- Team Member 1 -->
-            <div class="team-card">
-                <div class="member-avatar-container">
-                    <div class="member-avatar">
-                        <img src="images/team/member1.png" alt="Noctenz">
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="team-container">
+            <h2 class="team-title">Our Teams</h2>
+            <div class="title-underline"></div>
+            <div class="team-grid">
+                <!-- Noctenz Card -->
+                <div class="team-card">
+                    <div class="member-avatar-container">
+                        <div class="member-avatar">
+                            <img src="images/team/member1.png" alt="Noctenz">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Noctenz</h3>
+                        <p class="role">Founder & Lead Designer</p>
+                        <div class="member-contact">
+                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="member-info">
-                    <h3>Noctenz</h3>
-                    <p class="role">Founder & Lead Designer</p>
-                    <div class="member-contact">
-                        <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
-                        <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="team-card">
-                <div class="member-avatar-container">
-                    <div class="member-avatar">
-                        <img src="images/team/alex.jpg" alt="Alex">
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h3>Alex</h3>
-                    <p class="role">3D Model Specialist</p>
-                    <div class="member-contact">
-                        <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
-                        <a href="#" class="contact-icon"><i class="fab fa-artstation"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="team-card">
-                <div class="member-avatar-container">
-                    <div class="member-avatar">
-                        <img src="images/team/sarah.jpg" alt="Sarah">
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h3>Sarah</h3>
-                    <p class="role">Texture Artist</p>
-                    <div class="member-contact">
-                        <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
-                        <a href="#" class="contact-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                <!-- Add more team cards -->
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="contact-container">
-        <div class="contact-left">
-            <div class="brand">
-                <img src="images/logo.png" alt="Sovereign Studio Logo" class="brand-logo">
-                <div class="brand-text">
-                    <h2>Sovereign Studio</h2>
-                    <span>Minecraft</span>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <div class="brand">
+                    <img src="assets/logo.png" alt="Sovereign Studio Logo" class="brand-logo">
+                    <div class="brand-text">
+                        <h2>Sovereign Studio</h2>
+                        <span>Minecraft</span>
+                    </div>
                 </div>
+                <p class="brand-description">
+                    Bersama kami, wujudkan karakter minecraft impianmu! Temukan berbagai macam skin menarik 
+                    dari kreator berbakat kami. Bergabunglah dengan komunitas kreatif kami.
+                </p>
+                <a href="#" class="cta-button">Mulai Sekarang →</a>
             </div>
-            <p class="brand-description">
-                Bersama kami, wujudkan karakter minecraft impianmu! Temukan berbagai macam skin menarik 
-                dari kreator berbakat kami. Bergabunglah dengan komunitas kreatif kami.
-            </p>
-            <a href="#" class="cta-button">Mulai Sekarang →</a>
+            <div class="contact-right">
+                <h3>Ayo bergabung!</h3>
+                <p>Ingin mencari skin keren? Mau diskusi dengan kreator? 
+                   Atau punya pertanyaan? Semua bisa di Discord kami!</p>
+                <a href="#" class="discord-button">
+                    <i class="fab fa-discord"></i>
+                    Join Discord
+                </a>
+            </div>
         </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
+        </div>
+    </section>
 
-        <div class="contact-right">
-            <h3>Ayo bergabung!</h3>
-            <p>Ingin mencari skin keren? Mau diskusi dengan kreator? 
-               Atau punya pertanyaan? Semua bisa di Discord kami!</p>
-            <a href="#" class="discord-button">
-                <i class="fab fa-discord"></i>
-                Join Discord
-            </a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> </p>
-    </div>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
