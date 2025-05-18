@@ -729,3 +729,61 @@ section {
         gap: 30px;
     }
 }
+
+/* Mobile Responsive Fixes */
+@media screen and (max-width: 768px) {
+    /* Fix for overall container */
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        overflow-x: hidden;
+    }
+
+    /* Fix for text content */
+    p, h1, h2, h3, h4, h5, h6 {
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    /* Fix for team section */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* Fix for images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix for navigation */
+    .nav-links {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Add proper spacing */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Meta viewport tag in HTML */
+    /* Add this in your HTML head if not present */
+    /* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+}
+
+/* Additional fixes for extra small devices */
+@media screen and (max-width: 480px) {
+    .team-card {
+        max-width: 240px;
+    }
+}
