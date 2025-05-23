@@ -223,9 +223,9 @@ section {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    color: var(--primary-color);
+    color: white;
     text-decoration: none;
-    border: 1px solid var(--primary-color);
+    border: 1px solid #d42c34;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
