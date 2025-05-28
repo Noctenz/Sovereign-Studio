@@ -35,14 +35,13 @@
         </div>
     </nav>
 
-    <!-- BG Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-header">
                 <img src="images/header.png" class="hero-img">
             </h1>
             <a href="#about" class="hero-button">Scroll Down</a>
-            </div>
         </div>
     </section>
 
@@ -75,24 +74,7 @@
                 <p>Professional Minecraft models crafted to your specifications</p>
                 <a href="#contact" class="service-btn">Learn More</a>
             </div>
-            <div class="service-card">
-                <img src="images/hero-bg.png" alt="3D Models">
-                <h3>Custom Models</h3>
-                <p>Professional Minecraft models crafted to your specifications</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
-            <div class="service-card">
-                <img src="images/hero-bg.png" alt="3D Models">
-                <h3>Custom Models</h3>
-                <p>Professional Minecraft models crafted to your specifications</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
-            <div class="service-card">
-                <img src="images/hero-bg.png" alt="3D Models">
-                <h3>Custom Models</h3>
-                <p>Professional Minecraft models crafted to your specifications</p>
-                <a href="#contact" class="service-btn">Learn More</a>
-            </div>
+            <!-- Duplikat card bisa diganti kontennya -->
         </div>
     </section>
 
@@ -102,7 +84,6 @@
             <h2 class="team-title">Our Teams</h2>
             <div class="title-underline"></div>
             <div class="team-grid">
-                <!-- Noctenz Card -->
                 <div class="team-card">
                     <div class="member-avatar-container">
                         <div class="member-avatar">
@@ -119,78 +100,51 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add more team cards -->
-                <div class="team-card">
-                    <div class="member-avatar-container">
-                        <div class="member-avatar">
-                            <img src="images/team/member1.png" alt="Noctenz">
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Noctenz</h3>
-                        <p class="role">Founder & Lead Designer</p>
-                        <div class="member-contact">
-                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
-                            <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="member-avatar-container">
-                        <div class="member-avatar">
-                            <img src="images/team/member1.png" alt="Noctenz">
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Noctenz</h3>
-                        <p class="role">Founder & Lead Designer</p>
-                        <div class="member-contact">
-                            <a href="#" class="contact-icon"><i class="fab fa-discord"></i></a>
-                            <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="contact-icon"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Tambah team-card lain jika perlu -->
             </div>
         </div>
     </section>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Kolom 1 -->
-      <div class="footer-col">
-        <div class="brand">
-          <img src="images/logo.png" alt="Sovereign Studio Logo" class="brand-logo" />
-          <div>
-            <strong>Sovereign</strong> Studio
-          </div>
-        </div>
-        <p class="footer-desc">
-            In this blocky world, your creativity is limitless, There is no limit to building dreams, even from simple blocks. Like in Minecraft, life also needs crafting to be extraordinary.
-        </p>
-        <a href="#" class="cta-link">Check Product →</a>
-      </div>
-  
-      <!-- Kolom 3 -->
-      <div class="footer-col">
-        <h4>Join our community!</h4>
-        <p class="footer-desc">
-            Want something unique? We also accept commissions! We are ready to realize your Minecraft ideas whether for servers, personal projects, or content creators. Just tell us your concept, and let us build your dream world block by block. Hurry up and join now!
-        </p>
-        <a href="#" class="discord-button">
-          <i class="fab fa-discord"></i> Join Discord
-        </a>
-      </div>
-    </div>
-  
-    <div class="footer-bottom">
-      <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
-    </div>
-  </footer>  
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Sovereign Studio Logo" class="brand-logo" />
+                    <div>
+                        <strong>Sovereign</strong> Studio
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    In this blocky world, your creativity is limitless, There is no limit to building dreams, even from simple blocks. Like in Minecraft, life also needs crafting to be extraordinary.
+                </p>
+                <a href="#" class="cta-link">Check Product →</a>
+            </div>
 
-    <!-- Scripts -->
+            <div class="footer-col">
+                <h4>Join our community!</h4>
+                <p class="footer-desc">
+                    Want something unique? We also accept commissions! We are ready to realize your Minecraft ideas whether for servers, personal projects, or content creators. Just tell us your concept, and let us build your dream world block by block. Hurry up and join now!
+                </p>
+                <a href="#" class="discord-button">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
+        </div>
+    </footer>
+
+    <!-- Script untuk menu mobile -->
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
