@@ -17,164 +17,12 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
 }
 
 body {
     background-color: var(--background);
     color: var(--text-color);
     line-height: 1.6;
-    font-size: 16px;
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 15px;
-    }
-}
-
-section {
-    scroll-snap-align: start;
-}
-
-.hero-content {
-    max-width: 100%;
-}
-
-@media (max-width: 480px) {
-  .hero-img {
-    width: 80%;
-    height: auto;
-    margin-bottom: -1rem;
-  }
-
-  .team-grid {
-    gap: 15px;
-    padding: 10px;
-  }
-}
-
-button, 
-a,
-.nav-links a,
-.contact-icon {
-    min-height: 48px;
-    min-width: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    touch-action: manipulation;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 4px;
-}
-
-input, textarea {
-    font-size: 16px !important;
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(8, 8, 8, 0.95);
-        padding: 20px;
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-        font-size: 1.5rem;
-        color: var(--text-color);
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .member-avatar-container {
-        width: 120px;
-        height: 120px;
-    }
-
-    .member-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .role {
-        font-size: 1rem;
-    }
-
-    .about-title {
-        font-size: 2rem;
-    }
-
-    .about-description {
-        font-size: 1rem;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    .brand {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .brand-text {
-        text-align: center;
-    }
-
-    .contact-right {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-title, .about-title {
-        font-size: 1.75rem;
-    }
-
-    .team-card, .about-description {
-        padding: 20px;
-        font-size: 0.95rem;
-    }
 }
 
 /* Navigation */
@@ -229,11 +77,11 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     padding: 100px 5%;
     background: url('images/hero-bg.png') center/cover;
-    overflow: unset;
-  }  
+}
 
 .hero-content {
     max-width: 3000px;
