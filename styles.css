@@ -229,11 +229,11 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     padding: 100px 5%;
     background: url('images/hero-bg.png') center/cover;
-}
+    overflow: unset;
+  }  
 
 .hero-content {
     max-width: 3000px;
