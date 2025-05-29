@@ -224,7 +224,6 @@ section {
 }
 
 .service-btn {
-<<<<<<< HEAD
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -237,20 +236,6 @@ section {
 
 .service-btn:hover {
   background-color: #d42c34;
-=======
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #d42c34;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.service-btn:hover {
-    background-color: #d42c34;
->>>>>>> f168e373702b4337376fe60c70689a9bd041a48a
 }
 
 /* Team Section */
