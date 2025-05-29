@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Sovereign Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    .portfolio-section {
+      overflow-x: auto;
+    }
+  
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      padding: 2rem;
+      justify-content: center;
+    }
+  
+    .portfolio-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
+      border-style: solid;
+      border-color: #252525;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, rgba(212, 44, 52, 0.4) 0%, transparent 60%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+  
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+  
+    .hover-text {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      color: #d42c34;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; /* 👈 move content to bottom */
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      padding-bottom: 1.5rem; /* 👈 spacing from bottom */
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+  
+    .portfolio-item:hover .hover-text {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .hover-text::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      background: linear-gradient(to top, #141414 0%, rgba(28, 28, 28, 0) 75%);
+      transform-origin: bottom;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      z-index: -1;
+    }
+  
+    .portfolio-item:hover .hover-text::before {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  
+    .hover-text h3 {
+      color: #d42c34;
+      margin-bottom: 0.25rem;
+      font-size: 12px;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      font-family: 'MinecraftStyled', sans-serif;
+    }
+  
+    .hover-text p {
+      color: #ffffff;
+      line-height: 1.1;
+      font-size: 12px;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+  
+    .portfolio-item:hover .hover-text h3,
+    .portfolio-item:hover .hover-text p {
+      opacity: 1;  
+      transform: translateY(0);
+    }
+
+    .portofolio-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .portofolio-title {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    @font-face {
+      font-family: 'MinecraftStyled';
+      src: url('fonts/minecraft-styled-small-latin.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>  
+</head>
+<body>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav>
+      <div class="logo">
+          <img src="images/logo.png" alt="Sovereign Studios">
+      </div>
+      <div class="nav-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="#portofolio">Portfolio</a>
+          <a href="#team">Teams</a>
+      </div>
+      <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+      </div>
+  </nav>
+
+  <section id=portofolio class="portfolio-section">
+    <div class="portofolio-container">
+      <h2 class="portofolio-title">Weapon Models</h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="portfolio-gallery">
+      <div class="portfolio-item">
+        <img src="images/portofolio/bloodreaver.gif" alt="Blood Reaver">
+        <div class="hover-text">
+          <h3>Blood Reaver</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/equinox_axe.gif" alt="Equinox Axe">
+        <div class="hover-text">
+          <h3>Equinox Axe</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/greatsword.gif" alt="Greatsword">
+        <div class="hover-text">
+          <h3>Greatsword</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/celestial_greatsword.gif" alt="Celestial Greatsword">
+        <div class="hover-text">
+          <h3>Celestial Greatsword</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/demonic_spear.gif" alt="Demonic Spear">
+        <div class="hover-text">
+          <h3>Demonic Spear</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/darksoul_sword.gif" alt="Darksoul Blade">
+        <div class="hover-text">
+          <h3>Darksoul Blade</h3>
+          <p>Created By Noctenz</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/dfb.gif" alt="Dragon Forged Blade">
+        <div class="hover-text">
+          <h3>Dragon Forged Blade</h3>
+          <p>Created By: Noctenz, BagasCVX (Eye Animation)</p>
+          <p>Crazy Network RPG Item</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand">
+          <img src="images/logo.png" alt="Sovereign Studio Logo" class="brand-logo" />
+          <div><strong>Sovereign</strong> Studio</div>
+        </div>
+        <p class="footer-desc">Bringing your Minecraft world to life with premium models, textures, and more.</p>
+        <a href="#" class="cta-link">Check Product →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Join our community!</h4>
+        <p class="footer-desc">Want something unique? We also accept commissions! Tell us your concept and we'll make it real.</p>
+        <a href="#" class="discord-button"><i class="fab fa-discord"></i> Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sovereign Studio. All rights reserved - Made with <span class="heart">♥</span> by Noctenz</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
