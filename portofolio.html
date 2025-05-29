@@ -38,11 +38,13 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .portfolio-item.span-2 {
-      grid-column: span 2;
-      aspect-ratio: 5 / 1;
+    .portfolio-gallery.gallery-wide {
+      grid-template-columns: repeat(2, 1fr);
     }
 
+    .portfolio-gallery.gallery-wide .portfolio-item {
+      aspect-ratio: 2.5 / 1;
+    }
   
     .portfolio-item img {
       width: 100%;
@@ -244,14 +246,23 @@
           <p>Crazy Network RPG Item</p>
         </div>
       </div>
-      <div class="portfolio-item span-2">
+    </div>
+  </section>
+
+  <section id=mobmodel class="mobmodel-section">
+    <div class="portofolio-container">
+      <h2 class="portofolio-title">Mob Models</h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="portfolio-gallery gallery-wide">
+      <div class="portfolio-item">
         <img src="images/logo.png" alt="2x1" />
         <div class="hover-text">
           <h3>Test</h3>
           <p>Test</p>
         </div>
       </div>
-      <div class="portfolio-item span-2">
+      <div class="portfolio-item">
         <img src="images/logo.png" alt="2x1" />
         <div class="hover-text">
           <h3>Test</h3>
