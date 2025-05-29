@@ -18,9 +18,9 @@
   
     .portfolio-gallery {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(175px, 200px));
       gap: 1rem;
-      padding: 2rem;
+      padding: 0.5rem;
       justify-content: center;
     }
   
@@ -34,7 +34,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at center, rgba(212, 44, 52, 0.4) 0%, transparent 60%);
+      background: radial-gradient(circle at center, rgba(212, 44, 52, 0.4) 0%, transparent 50%);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
@@ -131,8 +131,31 @@
       color: #ffffff;
       font-size: 2.5rem;
       font-weight: 600;
-      margin-top: 30px;
-      margin-bottom: 15px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+/* GALERI TANPA CARD */
+    .portfolio-gallery.gallery-no-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(75px, 125px));
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .portfolio-gallery.gallery-no-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 0px;
+      background-color: #1a1a1a;
+      background: radial-gradient(circle at center, rgba(212, 44, 52, 0.295) 0%, transparent 45%);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-gallery.gallery-no-card img:hover {
+      transform: scale(1.1);
     }
 
     @font-face {
@@ -141,6 +164,7 @@
       font-weight: normal;
       font-style: normal;
     }
+ 
   </style>  
 </head>
 <body>
@@ -206,6 +230,8 @@
           <p>Created: By Noctenz</p>
         </div>
       </div>
+    </div>
+    <div class="portfolio-gallery">
       <div class="portfolio-item">
         <img src="images/portofolio/darksoul_sword.gif" alt="Darksoul Blade">
         <div class="hover-text">
@@ -248,25 +274,45 @@
       </div>
     </div>
   </section>
-
-  <section id=mobmodel class="mobmodel-section">
+  <section id=mobmodel class="portfolio-section">
     <div class="portofolio-container">
-      <h2 class="portofolio-title">Mob Models</h2>
+      <h2 class="portofolio-title">Fishing Models</h2>
       <div class="title-underline"></div>
     </div>
-    <div class="portfolio-gallery gallery-wide">
+    <div class="portfolio-gallery gallery-no-card">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377493731485286500/image.png?ex=68392a82&is=6837d902&hm=2d7a031a0531532431d00826bcd9d99c682a2c58ad0d701f17d001b5188a5f5d&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377494608161931394/image.png?ex=68392b53&is=6837d9d3&hm=8bd453288d807950292041b68cf92850e572486e4107598372d78c43812236eb&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377494714361839768/image.png?ex=68392b6c&is=6837d9ec&hm=f241eb57265989bf4940104c9bbec858076ec9cffc30aa2cddf16e4853cb37d4&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377494819559178341/image.png?ex=68392b85&is=6837da05&hm=f0dc44e17f2a7c29b154958fdd298251cbed59d57da1de4dbaded74a7a54eb87&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377494924986945586/image.png?ex=68392b9e&is=6837da1e&hm=bfebd05f5edb5a94e9c08c59f2c4d4aac788abf43e74e884cc22b60ddeb46c3e&" alt="Portofolio @Noctenz">
+    </div>
+    <div class="portfolio-gallery gallery-no-card">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377496699320402011/image.png?ex=68392d45&is=6837dbc5&hm=923e50ff688cb858b9e9958d25d6a005ad8699212740451eedac5a14ba9c31f4&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377498433409126440/image.png?ex=68392ee3&is=6837dd63&hm=081cfb42ff77ef1402d17780b72414cc483cc7754c8f02441a6aeafa99190bcd&" alt="Portofolio @Noctenz">
+      <img src="https://cdn.discordapp.com/attachments/988467646133579787/1377502788476731523/image.png?ex=683932f1&is=6837e171&hm=4f5dd1c29ff9838b49f038fc86570f18a818cdbae0dc7dff7a333bf0476aa287&" alt="Portofolio @Noctenz">
+    </div>
+    <div class="portfolio-gallery">
       <div class="portfolio-item">
-        <img src="images/logo.png" alt="2x1" />
+        <img src="images/portofolio/leviathan.gif" alt="2x1" />
         <div class="hover-text">
-          <h3>Test</h3>
-          <p>Test</p>
+          <h3>Leviathan</h3>
+          <p>Created by: Noctenz</p>
+          <p>Commissioned for Alwination</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portofolio/kraken.gif" alt="2x1" />
+        <div class="hover-text">
+          <h3>Kraken</h3>
+          <p>Created by: Noctenz</p>
+          <p>Commissioned for Alwination</p>
         </div>
       </div>
       <div class="portfolio-item">
         <img src="images/logo.png" alt="2x1" />
         <div class="hover-text">
-          <h3>Test</h3>
-          <p>Test</p>
+          <h3>Under Maintance</h3>
+          <p>....</p>
         </div>
       </div>
     </div>
