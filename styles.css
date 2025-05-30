@@ -31,11 +31,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 5%;
-  background-color: #08080881;
+  background-color: #080808b3;
   border-radius: 9999px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   position: fixed;
-  width: 80%;
+  width: 65%;
   top: 20px;
   left: 50%;
   z-index: 1000;
@@ -187,7 +187,7 @@ section {
 
 .service-card {
   background-color: var(--card-background);
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
@@ -295,7 +295,7 @@ section {
   width: 150px;
   height: 150px;
   margin: 0 auto 20px;
-  border-radius: 50%;
+  border-radius: 0%;
   position: relative;
   overflow: hidden;
 }
